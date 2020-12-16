@@ -24,7 +24,7 @@ ASSET_MODEL_ID="[Turbine Asset Model ID]" node dist/index.js
 ```
 
 # Architecture
-![Architecture Diagram](https://github.com/morrsing/sitewise-demo/blob/master/docs/arch.png?raw=true "Architecture Diagram")
+![Architecture Diagram](https://github.com/aws-samples/sitewise-data-ingestion-demo/blob/master/docs/arch.png?raw=true "Architecture Diagram")
 
 A data generator utility pushes measurements for all turbine assets into AWS IoT SiteWise at a rate of one measurement 
 per minute per asset. The transforms and calculated metrics on all turbine assets are published to AWS IoT Core topics, 
@@ -32,7 +32,7 @@ for which a rule is set to push records into a Kinesis Data Stream. A Lambda fun
 hydrates property aliases, and then writes transforms to an Amazon S3 bucket and metrics to Amazon Timestream.
 
 # Example Run: 525 Turbines
-![Cloudwatch dashboard for demo](https://github.com/morrsing/sitewise-demo/blob/master/docs/cloudwatch-dashboard.png?raw=true "Cloudwatch dashboard for demo")
+![Cloudwatch dashboard for demo](https://github.com/aws-samples/sitewise-data-ingestion-demo/blob/master/docs/cloudwatch-dashboard.png?raw=true "Cloudwatch dashboard for demo")
 At ~500 turbine assets (~2,000 tags) with one data point per minute per asset tag flowing into AWS IoT SiteWise, this architecture can easily handle the load, even with a single-sharded Kinesis Data Stream, and, therefore, a maximum Lambda concurrency of 1. 
 
 Several CloudWatch metrics illuminated the success:
@@ -57,7 +57,7 @@ Once you have done this, you can begin deploying [Cloudformation](https://aws.am
 build up the demo, as detailed in the Basic Usage section. Finally, you can generate semi-random data to the assets 
 using the Data Generator utility included in the project.
 
-![Data generator output](https://github.com/morrsing/sitewise-demo/blob/master/docs/data-generator.png?raw=true "Data generator output")
+![Data generator output](https://github.com/aws-samples/sitewise-data-ingestion-demo/blob/master/docs/data-generator.png?raw=true "Data generator output")
 
 # Summary of Key Services Used
 The below descriptions are excerpted from the AWS materials describing the services to which they pertain:
