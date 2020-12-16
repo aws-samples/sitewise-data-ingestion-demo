@@ -111,11 +111,7 @@ export class DataLakeStack extends cdk.Stack {
         const assetMapperLambda = new AssetMapperLambda(this, 'AssetMapperLambda', {
             assetModelId: assetModelId.valueAsString,
             assetMapBucket: this.mapBucket
-        }) ;
-
-        // const assetMapper = new cfn.CfnCustomResource(this, 'AssetMapper', {
-        //     serviceToken: assetMapperLambda.lambda.functionArn
-        // });
+        });
 
         const assetMapProvider = new cr.Provider(this, 'AssetMapProvider', {
             onEventHandler: assetMapperLambda.lambda,
