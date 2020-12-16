@@ -1,0 +1,43 @@
+{
+  "name": "sitewise-demo",
+  "version": "0.1.0",
+  "bin": {
+    "nov-demo": "bin/nov-demo.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "1.72.0",
+    "@types/aws-lambda": "^8.10.64",
+    "@types/jest": "^26.0.16",
+    "@types/lodash": "^4.14.165",
+    "@types/node": "10.17.27",
+    "aws-cdk": "1.72.0",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^8.1.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-cloudformation": "^1.77.0",
+    "@aws-cdk/aws-iam": "^1.77.0",
+    "@aws-cdk/aws-iot": "^1.77.0",
+    "@aws-cdk/aws-iotsitewise": "^1.77.0",
+    "@aws-cdk/aws-kinesis": "^1.77.0",
+    "@aws-cdk/aws-kinesisfirehose": "^1.77.0",
+    "@aws-cdk/aws-lambda": "^1.77.0",
+    "@aws-cdk/aws-lambda-event-sources": "^1.77.0",
+    "@aws-cdk/aws-logs": "^1.77.0",
+    "@aws-cdk/aws-s3": "^1.77.0",
+    "@aws-cdk/aws-timestream": "^1.77.0",
+    "@aws-cdk/core": "^1.77.0",
+    "@aws-cdk/custom-resources": "^1.77.0",
+    "lodash": "^4.17.20",
+    "short-unique-id": "^3.2.0",
+    "source-map-support": "^0.5.16"
+  }
+}
