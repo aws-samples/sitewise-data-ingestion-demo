@@ -196,7 +196,7 @@ cdk deploy DataLakeStack \
 --parameters MemoryStoreRetentionPeriodInHours="24" \
 --parameters MagneticStoreRetentionPeriodInDays="7"
 ```
-# Utiliities 
+# Utilities 
 This project contains several utilities which may be useful in running the demonstration. They are located in the 
 `misc` directory, and are as follows:
 
