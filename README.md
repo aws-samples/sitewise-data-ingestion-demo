@@ -13,7 +13,7 @@ cd misc/windfarm-stack-manager && node dist/index.js init
 
 # Deploy stacks for AWS IoT SiteWise Asset Models and Assets, 
 cdk deploy AssetModelStack
-cdk deploy WindFarmStack0 --parameters ... --context ...
+cdk deploy WindFarmStack --parameters ... --context ...
 
 # Deploy a stack for a data lake and data ingestion pipeline.
 cdk deploy DataLakeStack
